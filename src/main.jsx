@@ -10,11 +10,11 @@ import Bag from './pages/BAg.jsx';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/shop",
     element: <App />,
     children: [
       {
-        path: "/",
+        path: "/shop",
         element: <Home />
       },
       {
