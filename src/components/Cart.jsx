@@ -26,7 +26,6 @@ const Cart = ({ className, title, price, key = 0, image = "/product1.png", ...pr
                             <button onClick={props.remove}>
                                 &times;
                             </button>
-
                         </Fragment>
                     )
                 }
@@ -34,7 +33,7 @@ const Cart = ({ className, title, price, key = 0, image = "/product1.png", ...pr
                 <footer className="Cart__footer">
                     <p className="price">{price} руб.</p>
 
-                    <Link to={`/product/${props.id}`} className="Cart__link">Смотреть</Link>
+                    <Link to={`/shop/product/${props.id}`} className="Cart__link">Смотреть</Link>
                 </footer>
             </div>
         </Fragment>

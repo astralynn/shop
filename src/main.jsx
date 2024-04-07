@@ -6,7 +6,7 @@ import { BrowserRouter, createBrowserRouter, RouterProvider } from 'react-router
 import Home from "./pages/Home.jsx";
 import Product from './pages/Product.jsx';
 import { CartProvider } from 'react-use-cart';
-import Bag from './pages/BAg.jsx';
+import Bag from './pages/Bag.jsx';
 
 const router = createBrowserRouter([
   {
@@ -18,21 +18,21 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: "product/:id",
+        path: "/shop/product/:id",
         element: <Product />
       },
       {
-        path: "bag",
+        path: "/shop/bag",
         element: <Bag />
       }
     ]
   }
-], {basename: "/"});
+], { basename: "/" });
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-   <CartProvider>
-    <RouterProvider router={router}/>
-   </CartProvider>
+    <CartProvider>
+      <RouterProvider router={router} />
+    </CartProvider>
   </React.StrictMode>,
 )
